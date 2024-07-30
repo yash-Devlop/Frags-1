@@ -4,7 +4,7 @@ export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 export const LOGOUT = 'LOGOUT';
 
 const apiUrl = process.env.REACT_APP_API_URL;
-
+//authActions
 export const login = (username, password) => {
   return async (dispatch) => {
     dispatch({ type: LOGIN_REQUEST });
