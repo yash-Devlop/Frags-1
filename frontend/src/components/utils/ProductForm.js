@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 
 function ProductForm() {
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const [productName, setProductName ] = useState('')
   const [productImage, setProductImage] = useState('')
   const [price, setPrice] = useState('')
@@ -12,7 +14,7 @@ function ProductForm() {
 
     const submitHandler = async (e) => {
         e.preventDefault()
-        const response = await fetch('http://localhost:5000/products', {
+        const response = await fetch(`${apiUrl}/products`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json'},
           body: JSON.stringify({productName, productImage, price, productDescription, sellerName: user.user})

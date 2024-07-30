@@ -5,6 +5,8 @@ import { insertCart } from '../../store/cartSlice';
 
 function ItemSection() {
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
     const [loading, setLoading] = useState(false)
     const [item, setItem] = useState([])
     const [cartData, setCartData] = useState([])
@@ -17,7 +19,7 @@ function ItemSection() {
     }
   
     const items = async () => {
-      const data = await fetch('http://localhost:5000/sellingItems');
+      const data = await fetch(`${apiUrl}/sellingItems`);
       const displayData = await data.json();
       setItem(displayData)
       if (item === null) {

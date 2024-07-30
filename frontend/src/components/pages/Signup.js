@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 function Signup() {
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
         const [email, setEmail] = useState('')
         const [username, setUsername] = useState('');
         const [password, setPassword] = useState('');
@@ -15,7 +17,7 @@ function Signup() {
         const signinHandler = async (e) => {
             e.preventDefault()
             try {
-                const response = await fetch('http://localhost:5000/signup', {
+                const response = await fetch(`${apiUrl}/signup`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, username, password })

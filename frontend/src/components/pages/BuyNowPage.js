@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 function BuyNowPage() {
-    
+  const apiUrl = process.env.REACT_APP_API_URL;
     const {id} = useParams()
     const [product, setProduct] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -10,7 +10,7 @@ function BuyNowPage() {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/product/${id}`)
+                const response = await fetch(`${apiUrl}/product/${id}`)
                 const data = await response.json()
                 setProduct(data)
                 setLoading(false)
@@ -23,7 +23,7 @@ function BuyNowPage() {
     }, [id])
     
     if (loading) {
-        return <div>Loading...</div>;
+        return <div className = 'min-h-screen bg-white flex items-center justify-center'>Loading...</div>;
       }
     
       if (!product) {
