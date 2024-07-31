@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {useSelector} from 'react-redux'
 import DropDownMenu from '../utils/DropdownMenu';
 
@@ -27,7 +27,7 @@ function Header() {
 
         <div>
         {isAuthenticated? <div>
-          <DropDownMenu />
+          <DropDownMenu /><Link to = '/Dashboard'>Dashboard</Link>
           </div>
         : 
           <div>
@@ -37,6 +37,7 @@ function Header() {
             <NavLink to = "/Signup" className= "bg-custom-green-2 text-custom-black px-4 py-2 ml-6 rounded-full hover:text-white" >
               Sign Up
             </NavLink>
+            
           </div>}
 
         </div>
