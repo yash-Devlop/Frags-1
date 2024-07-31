@@ -9,7 +9,7 @@ mongoose.connect(mongourl, {
     console.log("mongodb connected...")
 })
 .catch(() => {
-    console.log("failed to connect...")
+    console.log("mongodb failed to connect...")
 })
 
 const sellerSchema = mongoose.Schema({
