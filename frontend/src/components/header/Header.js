@@ -27,7 +27,7 @@ function Header() {
 
         <div>
         {isAuthenticated? <div>
-          <DropDownMenu /><Link to = '/Dashboard'>Dashboard</Link>
+          <DropDownMenu />
           </div>
         : 
           <div>

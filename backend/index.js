@@ -112,7 +112,7 @@ app.post('/userdashboard', async(req, res) => {
 
 app.post('/removeproduct', async(req, res) => {
     try {
-        await sellingData.deleteOne({_id: req.body.id})
+       const deleted = await sellingData.deleteOne({_id: req.body.id})
     } catch (error) {
         console.log(error)
     }

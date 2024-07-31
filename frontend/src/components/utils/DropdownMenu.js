@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import LogoutBtn from '../header/LogoutBtn';
-import { FaUserCircle, FaSignOutAlt, FaWpforms  } from 'react-icons/fa';
+import { FaUserCircle, FaSignOutAlt, FaWpforms, FaTachometerAlt  } from 'react-icons/fa';
 
 function DropDownMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,7 @@ function DropDownMenu() {
 
       {isOpen && (
         <div
-          className="origin-top-right absolute right-0 mt-2 w-64 h-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+          className="origin-top-right absolute right-0 mt-2 w-64 h-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
@@ -60,11 +60,23 @@ function DropDownMenu() {
               Sell products
             </Link>
             </div>
+            <div className = 'flex items-center hover:bg-gray-100 h-16 '>
+            <FaTachometerAlt size = '30' className= 'ml-3' />
+            <Link
+              to="/Dashboard"
+              className="text-gray-700 flex justify-center w-full block px-4 py-2 text-2xl"
+              role="menuitem"
+              tabIndex="-1"
+              id="menu-item-3"
+            >
+              Go to Dashboard
+            </Link>
+            </div>
             <div
               className="flex text-xl hover:bg-gray-100 h-16 "
               role="menuitem"
               tabIndex="-1"
-              id="menu-item-3"
+              id="menu-item-4"
             >
               <div className = 'flex items-center '>
               <FaSignOutAlt size= '30' className = 'text-red-600 mr-2 ml-5 ' />
