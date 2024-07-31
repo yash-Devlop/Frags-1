@@ -110,6 +110,15 @@ app.post('/userdashboard', async(req, res) => {
     }
 })
 
+app.post('/removeproduct', async(req, res) => {
+    try {
+        await sellingData.deleteOne({_id: req.body.id})
+    } catch (error) {
+        console.log(error)
+    }
+    
+})
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
