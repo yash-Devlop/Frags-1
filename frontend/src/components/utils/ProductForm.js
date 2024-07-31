@@ -9,6 +9,7 @@ function ProductForm() {
   const [productImage, setProductImage] = useState('')
   const [price, setPrice] = useState('')
   const [productDescription, setProductDescription] = useState('')
+  const [message, setMesage] = useState('')
 
   const {user} = useSelector((state) => (state.auth))
 
@@ -19,6 +20,8 @@ function ProductForm() {
           headers: { 'Content-Type': 'application/json'},
           body: JSON.stringify({productName, productImage, price, productDescription, sellerName: user.user})
         })
+        const data = response.json()
+        setMesage(data)
     }    
 
   return (
@@ -76,6 +79,7 @@ function ProductForm() {
         >
           Submit
         </button>
+        {message}
       </form>
     </div>
     </div>
