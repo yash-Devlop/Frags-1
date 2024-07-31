@@ -101,6 +101,15 @@ app.get('/product/:id', async(req, res) => {
     }
 })
 
+app.post('/userdashboard', async(req, res) => {
+    try {
+        const fetchUserProducts = await sellingData.find({sellerName: req.body.seller})
+        res.json(fetchUserProducts)
+    } catch (error) {
+        res.json('error in dashboard')
+    }
+})
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
