@@ -19,7 +19,6 @@ function ProductForm() {
           headers: { 'Content-Type': 'application/json'},
           body: JSON.stringify({productName, productImage, price, productDescription, sellerName: user.user})
         })
-        console.log(response)
     }    
 
   return (
