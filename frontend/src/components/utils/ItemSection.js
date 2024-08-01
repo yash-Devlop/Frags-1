@@ -7,7 +7,7 @@ function ItemSection() {
 
   const apiUrl = process.env.REACT_APP_API_URL;
 
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [item, setItem] = useState([])
     const [cartData, setCartData] = useState([])
 
@@ -22,16 +22,11 @@ function ItemSection() {
       try {
         const data = await fetch(`${apiUrl}/sellingItems`);
       const displayData = await data.json();
-      if (!displayData) {
-        setLoading(true)
-      } else {
-        setLoading(false)
         setItem(displayData)
-      }
+        setLoading(false)
       
       } catch (error) {
         console.log(error)
-        setLoading(true)
       }
       
       
@@ -42,11 +37,11 @@ function ItemSection() {
       
     }, []);  
   
-    if (loading) {
+    if (loading) return (
       <div className="flex items-center justify-center min-h-screen">
       <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-black"></div>
-    </div>
-    }
+    </div>)
+    
   
 
   else return (
