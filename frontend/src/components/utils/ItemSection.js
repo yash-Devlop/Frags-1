@@ -19,14 +19,22 @@ function ItemSection() {
     }
   
     const items = async () => {
-      const data = await fetch(`${apiUrl}/sellingItems`);
+      try {
+        const data = await fetch(`${apiUrl}/sellingItems`);
       const displayData = await data.json();
-      setItem(displayData)
-      if (item === null) {
+      if (!displayData) {
         setLoading(true)
       } else {
         setLoading(false)
+        setItem(displayData)
       }
+      
+      } catch (error) {
+        console.log(error)
+        setLoading(true)
+      }
+      
+      
     }
 
   useEffect(() => {
