@@ -48,24 +48,24 @@ function Signup() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
-          className = 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+          className = 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-black focus:border-black sm:text-sm'
         />
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Username"
-          className = 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+          className = 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-black focus:border-black sm:text-sm'
         />
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
-          className = 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm'
+          className = 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-black focus:border-black sm:text-sm'
         />
         <button type="submit" 
-          className = 'w-full flex justify-center py-2 px-4 border border-transparent rounded-md text-sm font-medium text-white bg-custom-green-3 hover:bg-custom-green-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>Sign in
+          className = 'w-full flex justify-center py-2 px-4 border border-black rounded-md text-sm font-medium text-white bg-black hover:bg-gray-800'>Sign in
         </button>
       </form>
       <div className = 'flex'>

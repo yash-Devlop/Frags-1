@@ -9,7 +9,7 @@ function Header() {
 
 
   return (
-    <nav className= "bg-custom-green-3 border-b-4 p-2" >
+    <nav className= " border-b-4 border-gray-400 p-2" >
       <div className= "container mx-auto flex justify-between items-center" >
         
         <NavLink to ="/">
@@ -20,9 +20,9 @@ function Header() {
         </NavLink>
         
         <div className="hidden md:flex space-x-4">
-          <NavLink to= "/" className= "text-white text-xl px-3  line-container" >Home</NavLink>
-          <NavLink to= "/About" className= "text-white text-xl px-3  line-container" >About</NavLink>
-          <NavLink to= "/ContactUs" className= "text-white text-xl px-3  line-container" >Contact Us</NavLink>
+          <NavLink to= "/" className= "text-black text-xl font-mono px-3  line-container" >Home</NavLink>
+          <NavLink to= "/About" className= "text-black text-xl font-mono px-3  line-container" >About</NavLink>
+          <NavLink to= "/ContactUs" className= "text-black text-xl font-mono px-3  line-container" >Contact Us</NavLink>
         </div>
 
         <div>
@@ -31,10 +31,10 @@ function Header() {
           </div>
         : 
           <div>
-            <NavLink to = "/Login" className= "bg-custom-green-1 text-custom-black px-4 py-2 rounded-full hover:text-white" >
+            <NavLink to = "/Login" className= "bg-black text-white border border-black px-4 mx-4 py-2 font-mono transition-colors rounded-full hover:bg-white hover:text-black" >
               Login
             </NavLink>
-            <NavLink to = "/Signup" className= "bg-custom-green-2 text-custom-black px-4 py-2 ml-6 rounded-full hover:text-white" >
+            <NavLink to = "/Signup" className= "bg-black text-white border border-black px-4 mx-4 py-2 font-mono transition-colors rounded-full hover:bg-white hover:text-black" >
               Sign Up
             </NavLink>
             

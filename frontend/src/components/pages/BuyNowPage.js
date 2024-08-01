@@ -23,7 +23,9 @@ function BuyNowPage() {
     }, [id])
     
     if (loading) {
-        return <div className = 'min-h-screen bg-white flex items-center justify-center'>Loading...</div>;
+        return <div className="flex items-center justify-center min-h-screen">
+        <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-black"></div>
+      </div>
       }
     
       if (!product) {
@@ -47,10 +49,10 @@ function BuyNowPage() {
                 <p className="text-gray-700 mb-4">{product.productDescription}</p>
                 <div className="flex items-center mb-4">
                 </div>
-                <div className="text-2xl font-bold text-green-600 mb-4"> &#x20B9; {product.price}</div>
+                <div className="text-2xl font-bold text-gray-500 mb-4"> &#x20B9; {product.price}</div>
                 <div className="text-gray-500 mb-4">Sold by: {product.sellerName}</div>
                 <button
-                  className="w-1/4 bg-yellow-500 text-white p-3 rounded-lg hover:bg-yellow-600 transition-colors font-bold"
+                  className="w-1/4 bg-black text-white border border-black p-3 rounded-lg hover:bg-transparent hover:text-black transition-colors font-bold"
                 >
                   Buy Now
                 </button>

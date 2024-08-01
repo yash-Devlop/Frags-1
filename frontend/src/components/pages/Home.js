@@ -12,7 +12,7 @@ function Home() {
   ]
 
   return (
-    <div className = 'w-cut-10 mx-auto bg-white'>
+    <div className = 'w-cut-10 mx-auto my-2 bg-white'>
     <div>
     <Carousel images= {images} />
     </div>
