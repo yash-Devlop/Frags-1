@@ -20,15 +20,15 @@ function contactUs() {
       <div className = 'flex items-center pb-5 '>
         <Link to = 'https://www.linkedin.com/in/yash-gupta-1468a51b2/' className='px-6 text-2xl text-blue-500 hover:text-blue-400' target="_blank">
           <img
-            src = 'https://static.vecteezy.com/system/resources/previews/023/986/970/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png'
+            src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFhrhJEQ383QCvlpQSf660zZnDpxchlHDyLA&s'
             alt = 'Linkedin'
             className = 'h-64 object-cover'
           />
         </Link>
         <Link to = 'https://github.com/yash-Devlop' className='px-6 text-2xl text-blue-500 hover:text-blue-400' target="_blank">
         <img
-            src = 'https://pngimg.com/d/github_PNG23.png'
-            alt = 'Linkedin'
+            src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ET5_1GoBzDMGfXpgmIX5HcNZpBpk8qsSQA&s'
+            alt = 'GitHub'
             className = 'h-64 object-cover'
           />
         </Link>
