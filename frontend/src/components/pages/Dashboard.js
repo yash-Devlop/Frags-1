@@ -42,24 +42,24 @@ function Dashboard() {
     )}
   else return (
     <div className="max-w-6xl mx-auto p-6 py-2 bg-transparent rounded-lg ">
-        <h2 className = 'text-8xl flex justify-center text-custom-green-3 bg-gray-200 rounded-full'><b>Dashboard</b></h2>
+        <h2 className = 'text-8xl flex justify-center text-black '><b>Dashboard</b></h2>
       <h2 className="text-2xl font-semibold text-blacks mb-4 mt-4"> Welcome {user.user}</h2>
 
       <div>
         {products.map((product) => (
       <div className = 'py-2'>
-          <div key={product._id} className="flex justify-between items-center py-2 bg-custom-cream rounded">
+          <div key={product._id} className="flex justify-between items-center py-2 bg-transparent border-2 border-black rounded shadow-lg">
             <img
              src = {product.productImage}
              alt = {product.productName}
-             className = 'h-64 w-auto object-cover mx-10 rounded shadow-md bg-white'
+             className = 'h-64 w-auto object-cover mx-10 rounded shadow-md border border-black bg-white'
              />
-            <span className="text-2xl w-64 text-custom-green-3"><b>{product.productName}</b></span>
-            <span className="text-lg">&#x20B9; {product.price}</span>
+            <span className="text-2xl w-64 text-gray-500"><b>{product.productName}</b></span>
+            <span className="text-lg text-gray-500">&#x20B9; {product.price}</span>
             <button 
                 onClick = {() => removeHandler(product._id)}
                 className="bg-red-500 text-white px-3 mx-5 py-1 rounded">
-              <FaTrash size = '30' />
+              <FaTrash size = '25' />
             </button>
           </div>
       </div>

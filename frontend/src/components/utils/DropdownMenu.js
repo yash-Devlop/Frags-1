@@ -24,7 +24,7 @@ function DropDownMenu() {
           aria-haspopup="true"
           onClick={toggleMenu}
         >
-          <FaUserCircle size='40' className = 'text-white hover:text-gray-200' />
+          <FaUserCircle size='40' className = 'text-black hover:text-gray-700' />
         </button>
       </div>
 
