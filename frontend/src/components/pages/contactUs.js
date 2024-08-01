@@ -27,7 +27,7 @@ function contactUs() {
         </Link>
         <Link to = 'https://github.com/yash-Devlop' className='px-6 text-2xl text-blue-500 hover:text-blue-400' target="_blank">
         <img
-            src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ET5_1GoBzDMGfXpgmIX5HcNZpBpk8qsSQA&s'
+            src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThdZlszhihSfJBfoXkpJtOvDk9p_sskS4rSQ&s'
             alt = 'GitHub'
             className = 'h-64 object-cover'
           />
