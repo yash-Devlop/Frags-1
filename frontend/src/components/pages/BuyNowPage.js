@@ -52,7 +52,7 @@ function BuyNowPage() {
                 <div className="text-2xl font-bold text-gray-500 mb-4"> &#x20B9; {product.price}</div>
                 <div className="text-gray-500 mb-4">Sold by: {product.sellerName}</div>
                 <button
-                  className="w-1/4 bg-black text-white border border-black p-3 rounded-lg hover:bg-transparent hover:text-black transition-colors font-bold"
+                  className="md:w-1/4 bg-black text-white border border-black p-3 rounded-lg hover:bg-transparent hover:text-black transition-colors font-bold"
                 >
                   Buy Now
                 </button>

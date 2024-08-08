@@ -8,7 +8,7 @@ function ProductFormPage() {
 
   return (
     <div>
-      {isAuthenticated? <ProductForm /> : <div>Please login</div>}
+      {isAuthenticated? <ProductForm /> : <div className = 'min-h-screen bg-gray-500 text-4xl font-mono flex justify-center items-center'>Please login</div>}
     </div>
   )
 }
