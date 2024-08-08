@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { insertCart } from '../../store/cartSlice';
 
 function ItemSection() {
@@ -12,10 +12,15 @@ function ItemSection() {
     const [cartData, setCartData] = useState([])
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const cartHandler = (productId) => {
       setCartData((prev) => ([...prev, productId]))
       dispatch(insertCart(cartData))
+    }
+
+    const buyNowHandler = (productId) => {
+      navigate(`/product/${productId}`)
     }
   
     const items = async () => {
@@ -59,8 +64,10 @@ function ItemSection() {
               <p className="text-gray-700 mt-1"> &#x20B9; {data.price}</p>
               <button
               onClick = {() => cartHandler(data._id)}
-               className='mt-3 bg-black text-white border border-black px-4 py-2 rounded-full hover:text-black hover:bg-transparent transition-colors'>Add to Cart</button>
-              <Link to ={`/product/${data._id}`} className='mt-3 ml-2 bg-black text-white border border-black px-4 py-2 rounded-full hover:text-black hover:bg-transparent transition-colors' target="_blank">Buy now</Link>
+               className='mt-3 bg-transparent text-black border border-black px-4 py-2 rounded hover:text-white hover:bg-black transition-colors'>Add to Cart</button>
+              {/* <Link to ={`/product/${data._id}`} className='mt-3 ml-2 bg-black text-white border border-black px-4 py-2 rounded hover:text-black hover:bg-transparent transition-colors' target="_blank">Buy now</Link> */}
+              <button onClick ={() => buyNowHandler(data._id)} className='mt-3 mx-2 bg-black text-white border border-black px-4 py-2 rounded hover:text-black hover:bg-transparent transition-colors' target="_blank">Buy now</button>
+              
 
             </div>
           ))}

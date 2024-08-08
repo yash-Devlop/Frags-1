@@ -31,7 +31,7 @@ function Header() {
           </div>
         : 
           <div>
-            <NavLink to = "/Login" className= "bg-black text-white border border-black px-4 mx-4 py-2 font-mono transition-colors rounded-full hover:bg-white hover:text-black" >
+            <NavLink to = "/Login" className= "bg-black text-white border border-black px-4 mx-4 py-2cd  font-mono transition-colors rounded-full hover:bg-white hover:text-black" >
               Login
             </NavLink>
             <NavLink to = "/Signup" className= "bg-black text-white border border-black px-4 mx-4 py-2 font-mono transition-colors rounded-full hover:bg-white hover:text-black" >
